@@ -1,0 +1,15 @@
+# Upgrade Ubuntu package cache
+sudo apt update
+
+# Install git and git-flow package
+sudo apt install git
+sudo apt install git-flow
+
+# Initialize Git repo
+git init
+git add -A
+git commit -m "Initial Commit"
+git push
+
+# Initilize Git flow
+git-flow init
