@@ -1,0 +1,13 @@
+
+gcloud projects list
+docker-machine create --driver google --google-project k8s-training-272213 docker-machine
+docker-machine ls
+docker-machine ip docker-machine
+eval "$(docker-machine env docker-machine)"
+docker images
+docker run -it ubuntu /bin/bash
+docker run -d --name web -p 80:80 nginx
+docker-compose -f ../../day02/docker-compose/gitlab-docker-compose.yml up -d
+docker-machine stop docker-machine
+docket-machine rm docker-machine
+
