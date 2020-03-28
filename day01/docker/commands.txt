@@ -1,5 +1,5 @@
 # Install Docker
-sudo apt install docker.io docker
+sudo apt install docker.io docker docker-compose
 
 # Docker Primer
 docker ps
@@ -11,7 +11,7 @@ docker run -it ubuntu /bin/bash
 # Docker Volume primer
 docker volume create my-vol
 docker volume inspect my-vol
-docker run --mount source=my-vol,target=/app -it /bin/bash
+docker run -it --mount source=my-vol,target=/app ubuntu /bin/bash
 
 # Docker application primer
 docker run --name mynginx1 -P -d nginx
